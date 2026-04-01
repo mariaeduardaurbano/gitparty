@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE `eventos` MODIFY `status` ENUM('ATIVO', 'CANCELADO', 'ENCERRADO') NOT NULL DEFAULT 'ATIVO';
