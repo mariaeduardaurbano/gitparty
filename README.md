@@ -100,7 +100,7 @@ Relacionam usuários aos eventos.
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/mariaeduardaorubano/gitparty.git
+git clone https://github.com/mariaeduardaurbano/gitparty.git
 ```
 
 2. Acesse a pasta:
