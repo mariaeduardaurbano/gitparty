@@ -129,7 +129,7 @@ npm run dev
 
 ---
 
-## 📡 Rotas da API (exemplo)
+## 📡 Rotas
 
 ### Usuários
 - `POST /usuarios/cadastrar`  
