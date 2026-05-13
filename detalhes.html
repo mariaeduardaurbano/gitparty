@@ -1,0 +1,198 @@
+<!DOCTYPE html><html class="light" lang="pt-BR" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>GitParty - Detalhes do Evento</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#ffb1c4",
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-background": "#211a1b",
+                        "on-primary-container": "#662439",
+                        "secondary-fixed": "#e2e2e2",
+                        "secondary-container": "#dfe0e0",
+                        "on-tertiary-container": "#393c3d",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#f9eaec",
+                        "on-tertiary-fixed-variant": "#444748",
+                        "tertiary-container": "#a4a6a7",
+                        "on-error-container": "#93000a",
+                        "surface": "#fff8f8",
+                        "outline-variant": "#d8c1c5",
+                        "background": "#fff8f8",
+                        "surface-dim": "#e5d7d8",
+                        "surface-container-high": "#f3e5e6",
+                        "inverse-surface": "#372e30",
+                        "tertiary-fixed-dim": "#c5c7c8",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#eddfe1",
+                        "surface-variant": "#eddfe1",
+                        "surface-container-low": "#fff0f2",
+                        "on-secondary-container": "#616363",
+                        "on-primary-fixed": "#3d031a",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#fff8f8",
+                        "on-tertiary-fixed": "#191c1d",
+                        "primary-fixed": "#ffd9e0",
+                        "outline": "#857276",
+                        "secondary": "#5d5f5f",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "tertiary": "#5c5f60",
+                        "on-primary-fixed-variant": "#743045",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#e1e3e4",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#91475c",
+                        "on-surface-variant": "#534346",
+                        "primary-container": "#e58ca3",
+                        "inverse-on-surface": "#fcedef",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#211a1b",
+                        "inverse-primary": "#ffb1c4",
+                        "primary": "#91475c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max": "1440px",
+                        "margin-mobile": "20px",
+                        "section-gap": "120px",
+                        "margin-desktop": "80px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Sora"],
+                        "display-xl": ["Sora"],
+                        "headline-md": ["Sora"],
+                        "headline-lg-mobile": ["Sora"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "display-xl": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style data-stitch-cursor=""></style><style data-stitch-scroll-lock=""></style></head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="bg-background/80 backdrop-blur-md sticky top-0 z-50">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-12">
+<img alt="GitParty" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ujBLSGK2UIPvBsABKIQZ9M9QTRdyDwx_JUJUHf93PMHzqZLeuUaBp26pub0Ly19D5II6zH2k8QV-39XrahH0cw7guDPh-D2Vb4FmSo2ToX3ofnECd8Rd8x2A7DcZdRxFoinesbmvD8b-7Wn7yAyq2xHhV0POD3Ypg2MxYks6P75VDVNNfaJpHXCB5HVG4_Kcl5S80NLJZj9dTBGpzu6SWY0hU3knXzD0JlL7svVdBg3r86B4jCYyJDCJN_F">
+</div>
+<div class="flex items-center gap-6">
+<a class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md uppercase tracking-wider" href="index.html">
+<span class="material-symbols-outlined">arrow_back</span>
+                    Voltar para Home
+                </a>
+</div>
+</nav>
+</header>
+<main>
+<!-- Rebuilt Event Details Screen Section -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Left Column: Event Information -->
+<div class="lg:col-span-5">
+<div class="mb-12">
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-8">Personalize sua Jornada</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-12">
+                                Envie seus documentos de viagem e fotos de inspiração para que nossa equipe de curadoria ajuste cada detalhe do seu itinerário futurista.
+                            </p>
+<!-- Image Upload Area (Following the reference card style) -->
+<div class="bg-surface-container-low border-2 border-dashed border-primary/20 rounded-lg p-12 flex flex-col items-center justify-center text-center group hover:border-primary/50 transition-all cursor-pointer hover:bg-primary/5" onclick="document.getElementById('file-input').click()">
+<div class="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center mb-6 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-primary text-3xl">cloud_upload</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-2">Upload de Imagem</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Arraste seus arquivos aqui ou clique para selecionar</p>
+<button class="px-8 py-3 bg-white text-on-surface-variant border border-outline-variant rounded-full font-label-sm text-label-sm uppercase tracking-widest hover:bg-surface-container-high transition-colors" onclick="document.getElementById('file-input').click()">
+                                    Selecionar Arquivos
+                                </button>
+<input type="file" id="file-input" class="hidden" accept="image/*"></div>
+</div>
+<!-- Mini Event Details Summary -->
+<div class="pt-8 border-t border-outline-variant">
+<div class="flex flex-col gap-6">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase block mb-1">Evento Selecionado</span>
+<h3 class="font-headline-md text-headline-md text-primary">Viagem para Itália</h3>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase block mb-1">Período</span>
+<p class="font-body-lg text-body-lg">15 - 25 Outubro, 2026</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Visual Grid (Following reference layout) -->
+<div class="lg:col-span-7 grid grid-cols-2 gap-6 relative">
+<!-- Left Sub-column -->
+<div class="space-y-6 pt-12">
+<div class="rounded-lg overflow-hidden aspect-square relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Travel planning diary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1JlzfRob9zpUKq01bqDN9WPALxM_v1flyQTNQo_doBl8qlMDI2pOTaeam0PBfDQPD7xcEWvjv2ZTse__YFVlVvayZAvYMdmKiJzd9I1ViFJylbB_4tZo5-D9q9ymCavxslykMF3TS7sopbKWJeGarXE2ayuRBl4ZD1oXSOkhw5K8nQI7WViqg7p4i0F0YTfFcUwt6LYJvsweQDB-7om2etVp9s7H_hGLzqFqzMX2o74KawbY_pinJCQmnOnLcghE2_TSOP8bef2nP">
+</div>
+<div class="rounded-lg aspect-[4/5] bg-primary flex items-center justify-center p-8 shadow-sm">
+<h2 class="font-display-xl text-[64px] text-white/20 uppercase break-all leading-none pointer-events-none">LUXO</h2>
+</div>
+</div>
+<!-- Right Sub-column -->
+<div class="space-y-6">
+<div class="rounded-lg overflow-hidden aspect-[3/4] relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Luxury hotel lobby" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuXFhFpTKPVuvkOw2zPZ9cNETnTl9dDqwmzzyIFXBRZWwk8g3jVvWEX4DA_ZVKn9WjVW9O5Xe8YHPI5i52mpkDZerkGE2jdGdmJ4O1Cb4yiXATz8_U70qRNLyKqfdOz18aNl8rl8Wh_Mvbi3f7qdOqT7vE_Wphye0sWxIZ0O7HOgRdrOBI1QuEKmg3JKDbC0BkY6_Jx7bHLgvWL3PGw4BGFt1DAgbT2HNWOe6tDu2qJq5c48Bd83Kn8Tmgoa_9BF2WZ-D20BVTSV3c">
+</div>
+<div class="rounded-lg aspect-square bg-surface-container-high flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary text-5xl">auto_awesome</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container py-12 mt-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center">
+<div class="mb-8 md:mb-0">
+<img alt="GitParty" class="h-10 w-auto mb-2" src="{{DATA:IMAGE:IMAGE_10}}">
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">© 2026 GitParty. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#">LinkedIn</a>
+</div>
+</div>
+</footer>
+
+
+</body></html>

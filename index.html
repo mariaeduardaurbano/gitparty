@@ -1,0 +1,271 @@
+<!DOCTYPE html><html class="light" lang="pt-BR" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#a4a6a7",
+                    "on-tertiary-fixed-variant": "#444748",
+                    "surface-container": "#f9eaec",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-tertiary-container": "#393c3d",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#dfe0e0",
+                    "on-primary-container": "#662439",
+                    "on-background": "#211a1b",
+                    "on-secondary-fixed-variant": "#454747",
+                    "primary-fixed-dim": "#ffb1c4",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#3d031a",
+                    "on-secondary-container": "#616363",
+                    "surface-container-low": "#fff0f2",
+                    "surface-variant": "#eddfe1",
+                    "surface-container-highest": "#eddfe1",
+                    "tertiary-fixed-dim": "#c5c7c8",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#372e30",
+                    "surface-dim": "#e5d7d8",
+                    "surface-container-high": "#f3e5e6",
+                    "background": "#fff8f8",
+                    "outline-variant": "#d8c1c5",
+                    "surface": "#fff8f8",
+                    "tertiary": "#5c5f60",
+                    "on-primary-fixed-variant": "#743045",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "secondary": "#5d5f5f",
+                    "outline": "#857276",
+                    "primary-fixed": "#ffd9e0",
+                    "on-tertiary-fixed": "#191c1d",
+                    "surface-bright": "#fff8f8",
+                    "primary": "#91475c",
+                    "inverse-primary": "#ffb1c4",
+                    "on-surface": "#211a1b",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#e58ca3",
+                    "inverse-on-surface": "#fcedef",
+                    "surface-tint": "#91475c",
+                    "on-surface-variant": "#534346",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#e1e3e4",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "container-max": "1440px",
+                    "unit": "8px",
+                    "margin-desktop": "80px",
+                    "gutter": "24px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "display-xl": ["Sora"],
+                    "headline-lg": ["Sora"],
+                    "headline-lg-mobile": ["Sora"],
+                    "headline-md": ["Sora"],
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "display-xl": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .chrome-text {
+            background: linear-gradient(135deg, #a1a1a1 0%, #ffffff 50%, #7a7a7a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        /* Modal visibility control */
+        #eventModal[aria-hidden="true"] {
+            display: none;
+        }
+    </style>
+<style data-stitch-cursor=""></style><style data-stitch-scroll-lock=""></style><style data-stitch-cursor=""></style><style data-stitch-scroll-lock=""></style><style data-stitch-cursor=""></style><style data-stitch-scroll-lock=""></style></head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-background/80 backdrop-blur-md font-body-md text-body-md uppercase tracking-wider top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop py-unit max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-12">
+<img alt="GitParty" class="h-10 w-auto" src="data:image/png;base64,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">
+<div class="hidden md:flex gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Explore</a>
+<a class="text-primary font-bold border-b-2 border-primary" href="#">Events</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">About</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors duration-300">
+<span class="material-symbols-outlined text-primary" data-icon="search">search</span>
+</button>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+</div>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden bg-background px-margin-desktop py-section-gap flex flex-col items-center justify-center min-h-[80vh]">
+<div class="relative z-10 max-w-container-max w-full flex flex-col items-center text-center">
+<div class="relative mb-8">
+<h1 class="font-display-xl text-display-xl uppercase leading-none tracking-tighter relative z-10">SEUS <span class="inline-flex items-center justify-center w-48 md:w-60 h-24 relative mx-4"><img alt="Planet" class="w-full h-auto object-contain absolute z-20 transform scale-110 drop-shadow-[0_0_30px_rgba(229,140,163,0.3)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmad4FBtAGUUXr10fXszney8BX6HPpNpw-Z6RRudCakSKsju38Gdh3tXbqSnIT_pD-u-x4_E3VC3qvLC-Ae8HeZH-UAADi4B7fgOZnIavfi9rvhzn_JVYk_3sJfjJ_oOOQaMQrXln9ty2dZ3kXb1RMrwQw_DDK2lMAVAfWyaDl-SY4zEVX1rGs97H93TtZHGwYDWZ38PcdrCkmexLcn8DIridq80I4dJVA9yMHS-KjKYx9nDH8fPqgDQR32kmaRf67y5RCS__YT9Rl"></span> <span class="text-primary-container">EVENTOS</span></h1>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">
+                Descubra o futuro das viagens exclusivas com a GitParty. Eventos desenhados para quem busca luxo, tecnologia e conexões autênticas ao redor do globo.
+            </p>
+</div>
+</section>
+<!-- Events List Header & Control -->
+<section class="bg-background px-margin-desktop py-12 border-t border-surface-variant/30">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-end gap-8">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-2 block">Curadoria Exclusiva</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Lista de Eventos</h2>
+</div>
+<button class="bg-primary text-white px-10 py-4 rounded-full font-bold flex items-center gap-3 hover:shadow-xl hover:shadow-primary/20 transition-all duration-300" onclick="document.getElementById('eventModal').setAttribute('aria-hidden', 'false')">
+                Cadastrar Evento
+                <span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+</button>
+</div>
+</section>
+<!-- Events Grid -->
+<section class="bg-background px-margin-desktop pb-section-gap">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Event Card 1 -->
+<div class="md:col-span-8 group relative rounded-xl overflow-hidden aspect-video md:aspect-auto md:h-[500px]">
+<img alt="Viagem para Itália" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBixziSxO1Sv6_Dl9MS-zjGZupm6MkyZgU85g9EQ0KBku4apxr41fNKSfAGGN8fUAF8KjAkSvuWhkOJ6zLPH7fwuu3wDlsI4atew8NhJIengXQ9byUgUR2qTyXmjRNLSS6DhHYDUErkKEGL9NR079PMhdb82LIq1GZs9jJo440A8cheinxLcfy89uiU0UwNugLd5pAppMLXl9WITJyJBlyntskbGFrb-bUCSrTxSUM2LFGsbW2zRj_LPDXFds7e74Q62iztGdYnl4R9">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-12 w-full flex justify-between items-end">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-white">Viagem para Itália</h3>
+</div>
+<a href="detalhes.html" class="bg-white text-on-background px-6 py-3 rounded-full font-bold hover:bg-primary-container hover:text-white transition-colors duration-300 inline-block">Ver Detalhes</a>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="md:col-span-4 group relative rounded-xl overflow-hidden h-[500px]">
+<img alt="Viagem para Espanha" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB42tKnAlO5dGZf0Kna_Y1__WzvcJeRgw2htTA_y4NGfOrrulM65VkwvPm5bKbuD1X0rRwyigZtTyn8rWV7hHX5A7R8_hv8msR2AH0pUCfOMWKHcnH_zWTm_6JeYjCCKpjhcGKVTXVES9dRXn4yst8Bz_F22PeQPEgriVqeQEGl0ux16NiCl2IfN4h1yLYhGbPElwYAUdUXzwCF2FPR47cLRW-amTdZc6SdVyANDM7ZwIkcUAmPtoKp-moSOyj6DPJrkFBHSGb7MHLt">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full flex justify-between items-end">
+<h3 class="font-headline-md text-headline-md text-white">Viagem para Espanha</h3>
+<a href=" " class="border border-white text-white p-3 rounded-full hover:bg-white hover:text-on-background transition-all duration-300 flex items-center justify-center">
+<span class="material-symbols-outlined">visibility</span>
+</a>
+</div>
+</div>
+<!-- Event Card 3 -->
+<div class="md:col-span-4 group relative rounded-xl overflow-hidden h-[400px]">
+<img alt="Aventura na Grécia" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5wlbAWBWpy0hVlr5pc1H3asSXGBxXyP6bLsXlmj6_UvAu3JkreeWInOrP_XCLQ99RwSfsvZUPMLrHMExkLfLpWXm9H2480gplKWhgN1w_mMRJc98w25opD205S_ZNBHQE-zQjzPoSNQBdQ07uN68qVNFOEFkhNFWizdedHgQedddtozuCPeebCGB34V6dze9AMh92-WsbNNm9De3KjWxbzVbn7MIxUYY5WlZhfedoZLZKWQT5nuNF6C7KTygqbtsbkRwa4BbRwRV1">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full flex justify-between items-end">
+<h3 class="font-headline-md text-headline-md text-white">Aventura na Grécia</h3>
+<a href=" " class="border border-white text-white p-3 rounded-full hover:bg-white hover:text-on-background transition-all duration-300 flex items-center justify-center">
+<span class="material-symbols-outlined">visibility</span>
+</a>
+</div>
+</div>
+<!-- Decorative Promo Card -->
+<div class="md:col-span-8 bg-surface-container rounded-xl flex items-center justify-center p-12 h-[400px] overflow-hidden relative">
+<div class="absolute top-0 right-0 p-8 opacity-40">
+<span class="material-symbols-outlined text-primary text-[120px]" data-icon="travel_explore">travel_explore</span>
+</div>
+<div class="relative z-10 max-w-lg">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4">Pronto para o Próximo Nível?</h3>
+<p class="font-body-md text-on-surface-variant mb-8">Nossos eventos são limitados a poucos convidados para garantir uma experiência verdadeiramente exclusiva.</p>
+<button class="text-primary font-bold flex items-center gap-2 group">
+                        Solicitar Convite VIP
+                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="absolute bottom-[-50px] right-[-50px] w-64 h-64 bg-gradient-to-br from-white via-surface-variant to-outline-variant rounded-full blur-2xl opacity-60"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Modal: Cadastrar Evento -->
+<div aria-hidden="true" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-on-background/40 backdrop-blur-sm" id="eventModal">
+<div class="bg-surface w-full max-w-lg rounded-xl overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-300">
+<div class="p-8 border-b border-outline-variant flex justify-between items-center">
+<h3 class="font-headline-md text-primary">Cadastrar Novo Evento</h3>
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors" onclick="document.getElementById('eventModal').setAttribute('aria-hidden', 'true')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<form class="p-8 space-y-6" onsubmit="event.preventDefault(); document.getElementById('eventModal').setAttribute('aria-hidden', 'true')">
+<div class="space-y-2">
+<label class="block font-label-sm uppercase text-on-surface-variant">Nome do Evento</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 focus:outline-none focus:border-primary" placeholder="Ex: Viagem para Tóquio" required="" type="text">
+</div>
+<div class="space-y-2">
+<label class="block font-label-sm uppercase text-on-surface-variant">Data Prevista</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 focus:outline-none focus:border-primary" required="" type="date">
+</div>
+<div class="space-y-2">
+<label class="block font-label-sm uppercase text-on-surface-variant">Imagem de Capa (URL)</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 focus:outline-none focus:border-primary" placeholder="https://..." required="" type="url">
+</div>
+<button class="w-full bg-primary text-white py-4 rounded-full font-bold hover:scale-[1.02] transition-transform" type="submit">Publicar Evento</button>
+</form>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container mt-section-gap">
+<div class="bg-surface-container-low">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-12 w-full max-w-container-max mx-auto gap-8">
+<div class="flex flex-col gap-4 items-center md:items-start">
+<span class="font-headline-md text-headline-md text-on-surface italic font-extrabold">GitParty</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs text-center md:text-left">Elevando o padrão de eventos exclusivos globais através do design e inovação.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-12 text-center md:text-left">
+<div class="flex flex-col gap-3">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-2">Navegação</span>
+<a class="text-on-surface-variant hover:text-primary transition-all underline-offset-4 hover:underline" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-all underline-offset-4 hover:underline" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-2">Social</span>
+<a class="text-on-surface-variant hover:text-primary transition-all underline-offset-4 hover:underline" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-primary transition-all underline-offset-4 hover:underline" href="#">LinkedIn</a>
+</div>
+</div>
+</div>
+<div class="px-margin-desktop py-6 border-t border-outline-variant/20 w-full max-w-container-max mx-auto text-center md:text-left text-on-surface-variant/60 font-label-sm">
+            © 2026 GitParty. All rights reserved.
+        </div>
+</div>
+</footer>
+
+
+</body></html>
